@@ -1,0 +1,73 @@
+
+# Code Style and Best Practices
+
+This project follows strict code style and best practices to ensure consistency and maintainability.
+
+## General Coding Standards
+
+- **DO NOT** use semicolons at the end of statements
+- Use single quotes for strings
+- Use 2 spaces for indentation
+- Use descriptive variable and function names
+- Use camelCase for variables and functions
+- Use PascalCase for component names and class names
+- Use SCREAMING_SNAKE_CASE for constants
+
+## TypeScript Rules
+
+- **NEVER** use the `any` type (except in test files)
+- Always define proper interfaces/types for data structures
+- Use type inference where it's obvious
+- Use TypeScript's strict mode
+- Put shared interfaces in the common package
+- Export types that are used across multiple files
+
+## React Patterns
+
+- Use functional components with hooks
+- Keep components small and focused on a single responsibility
+- Use proper component splitting for reusability
+- Extract business logic to custom hooks
+- Use React Query for data fetching (see api-calls.mdc)
+- For forms, use React Hook Form with Zod validation (see forms.mdc)
+
+## Component Structure
+
+- Components should be organized by domain/feature
+- Each component should have a clear API defined with TypeScript
+- Extract common UI elements to the UI package
+- Use composition over inheritance
+- Import Shadcn UI components from `@solid-ats/ui`, never directly
+
+## File Organization
+
+- One component per file
+- Files should be named after the component they export
+- Group related files in feature-specific folders
+- Use barrel files (index.ts) for cleaner imports
+- Keep logic close to where it's used
+
+## Code Quality
+
+- Avoid commenting obvious code (focus on "why" not "what")
+- Write meaningful tests for business logic
+- Avoid excessive nesting
+- Use early returns for guard clauses
+- Prefer immutable data structures
+
+## Imports and Dependencies
+
+- Keep imports organized:
+  1. External libraries
+  2. Internal packages
+  3. Local imports
+- Don't add new libraries if similar functionality exists
+- Don't use direct imports from node_modules that bypass the UI package
+- Use named exports for better refactoring support
+
+## Commits and Pull Requests
+
+- Use descriptive commit messages
+- Keep PRs focused on a single feature or fix
+- Always run linting and tests before committing
+- Fix any errors or warnings before submitting PRs

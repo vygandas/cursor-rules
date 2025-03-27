@@ -1,0 +1,10 @@
+# CD and navigating within the project
+
+- Memorize where project root dir is
+- Never go outside the project!
+- Remember where the project root is
+- Do not do `cd ../..` multiple times. This is an issue where you go outside and commands stops working
+- NEVER run app separately. ONLY run all apps together! ONLY from root of the project and with `pnpm dev`! Otherwise you will get ports conflict and it will not work...
+- YOU DO NOT NEED TO RESTART SERVER SEPARATELY! WHEN YOU RUN `PNPM DEV` FROM THE ROOT, IT KILLS ALL THE PREVIOUS PROCESSES AND RELEASES PORTS.
+- Do not modify anything else that was not asked to be modified!
+- Always use this naming convention like 

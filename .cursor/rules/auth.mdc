@@ -1,0 +1,7 @@
+
+# Authentication and crucial data
+
+- When user is authenticated, you should add auth headers to `axios` global entity which is imported; this then works across whole project
+- Authentication information is needed across whole project
+- Company is also required at the top level, because user has to have some active company selected to be able to perform any action
+- Company is the owner of every entity that is created

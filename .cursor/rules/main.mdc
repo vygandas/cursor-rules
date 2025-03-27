@@ -1,0 +1,28 @@
+# CRITICAL RULES
+
+- Never add libraries or packages without previous confirmation
+- For any UI component, priority to use Shadcn components or try to reuse existing components
+- Frontend stack: `react`, `typescript`, `@tanstack/react-query`, `react-hook-form`, `zod`
+- Backend stack: `node`, `express`, `typescript`, `mongoose`, `zod`, `twilio`, `@sendgrid/mail`
+- Reuse `zod` rules and keep those in packages verification
+- Keep interfaces in packages too, so it would be reused in api and dashboard
+- When you consider the task is done, cd into project root and always run `pnpm format`, `pnpm lint`, `pnpm build`, `pnpm test`. If there's any issue, fix it, and re-run again this rule requirements. It all has to be ran from the project root directory. Never start refactoring files if you were not asked to, just fix the issue you have created!
+- Never use context, instead, use react-query, because it already catches and handles that. Never overcomplicate.
+- We name files like this, for example: `login.page.tsx`, `user.interfate.ts`, `payload.type.ts`, `useAuth.hook.ts`, etc.
+- We use components dir for components that has no business logic inside, like atoms; we use viws dir for compositions, like molecules; we use pages dir for full pages, like organisms.
+- If your solution might be seen as a hack or workaround of the problem - it should not be continued and is unacceptable. Instead, ask the user which direction to move, maybe ask for examples.
+- Never git commit or push.
+
+## 1. Type Safety
+
+- **NEVER use the `any` type** in TypeScript code (except in test files)
+- Always use proper typing for functions, variables, and components
+- Don't use type assertions (`as`) without careful consideration
+- Don't disable TypeScript checks with `// @ts-ignore` or similar
+
+## 2. Code Quality and Linting
+
+- **NEVER change Prettier or ESLint configurations** without explicit permission
+- **NEVER use ignore tags** (like `// eslint-disable-next-line`) to avoid fixing actual code issues
+- Don't commit code with linting errors or TypeScript errors
+- Always run `pnpm lint`, `pnpm test`, and `pnpm build` before considering work complete

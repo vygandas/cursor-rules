@@ -1,0 +1,7 @@
+
+# How to do forms
+
+- We are using `react-hook-form` as hook for forms and `zod` for validation with combination with DTOs in shared dir
+- We use DTOs from shared directory because we want to have same validation rules across frontend and backend
+- Even if it's UI task, implement proper forms handling to be safe in the future
+
